@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import sys
 import random
 import time
 
@@ -20,10 +19,6 @@ class Game(object):
 
 
 class DefiDuChallengeWindow(eqt.EasyWindow):
-
-    # unit = secs
-    initialBillboardDisplayTime = 0.1
-    revelationTime = 2
 
     def __init__(self):
         super(DefiDuChallengeWindow, self).__init__()
