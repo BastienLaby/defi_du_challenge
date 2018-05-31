@@ -1,0 +1,29 @@
+{
+    "main": "img/main.png",
+    "games": {
+        "MARIO KART DOUBLE DASH": {
+            "revealed": "img/dd.jpg",
+            "nonRevealed": "img/random_1.png"
+        },
+        "GENITAL JOUSTING": {
+            "revealed": "img/gj.jpg",
+            "nonRevealed": "img/random_2.png"
+        },
+        "BASKHEAD": {
+            "revealed": "img/bh.jpg",
+            "nonRevealed": "img/random_3.png"
+        },
+        "GETTING OVER IT": {
+            "revealed": "img/goi.jpg",
+            "nonRevealed": "img/random_4.png"
+        },
+        "TRICKY TOWERS": {
+            "revealed": "img/tt.jpg",
+            "nonRevealed": "img/random_5.png"
+        },
+        "GANG BEASTS": {
+            "revealed": "img/gb.jpg",
+            "nonRevealed": "img/random_6.png"
+        }
+    }
+}

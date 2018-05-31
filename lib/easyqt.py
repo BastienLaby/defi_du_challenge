@@ -8,24 +8,12 @@ import sys
 import os
 import platform
 
-try:
-    from core.ttLogger import ttLogger
-except ImportError:
-    sys.path.append('//srv-bin/bin/python/teamto')
-    from core.ttLogger import ttLogger
-log = ttLogger.createTTLogger()
+import logging
+log = logging.Logger('info')
 
-if platform.architecture()[0] == '64bit':
-    sys.path.append('//srv-bin/bin/python/modules27_64')
-else:
-    sys.path.append('//srv-bin/bin/python/modules27')
-try:
-    from PySide import QtCore, QtGui
-    from PySide.QtGui import QPalette, QColor
-    from PySide.QtCore import Qt
-except ImportError:
-    log.error('No module PySide found.')
-    raise
+from PySide import QtCore, QtGui
+from PySide.QtGui import QPalette, QColor
+from PySide.QtCore import Qt
 
 
 class EasyBase(object):
@@ -95,7 +83,6 @@ class EasyWidget(QtGui.QWidget, EasyBase):
         if isinstance(self.layout, QtGui.QGridLayout):
             self.layout.addWidget(widget, row, col, rowSpan, colSpan, stretch=stretch)
         else:
-            print widget
             self.layout.addWidget(widget)
 
     def addWidgets(self, *widgets):
@@ -105,7 +92,6 @@ class EasyWidget(QtGui.QWidget, EasyBase):
         '''
         if isinstance(self.layout, QtGui.QGridLayout):
             raise Exception('GridLayout is not supported with addWidgets(*widgets) function')
-        print widgets
         for widget in widgets:
             self.addWidget(widget)
 
